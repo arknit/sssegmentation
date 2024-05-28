@@ -24,6 +24,7 @@ from .mhp import MHPv1Dataset, MHPv2Dataset
 from .nighttimedriving import NighttimeDrivingDataset
 from .voc import VOCDataset, PascalContextDataset, PascalContext59Dataset
 from .coco import COCOVOCSUBDataset, COCOStuffDataset, COCOStuff10kDataset
+from .floodnet import FloodNet
 
 
 '''MultipleDataset'''
@@ -87,7 +88,7 @@ class DatasetBuilder(BaseModuleBuilder):
         'LIPDataset': LIPDataset, 'ATRDataset': ATRDataset, 'MHPv1Dataset': MHPv1Dataset, 'MHPv2Dataset': MHPv2Dataset, 'SuperviselyDataset': SuperviselyDataset,
         'HRFDataset': HRFDataset, 'ChaseDB1Dataset': ChaseDB1Dataset, 'STAREDataset': STAREDataset, 'DRIVEDataset': DRIVEDataset, 'SBUShadowDataset': SBUShadowDataset,
         'VSPWDataset': VSPWDataset, 'ADE20kDataset': ADE20kDataset, 'DarkZurichDataset': DarkZurichDataset, 'NighttimeDrivingDataset': NighttimeDrivingDataset,
-        'CityScapesDataset': CityScapesDataset, 'MultipleDataset': MultipleDataset,
+        'CityScapesDataset': CityScapesDataset, 'MultipleDataset': MultipleDataset, 'FloodNet': FloodNet,
     }
     '''build'''
     def build(self, mode, logger_handle, dataset_cfg):

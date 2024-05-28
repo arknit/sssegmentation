@@ -4,8 +4,8 @@ import os
 
 '''DATASET_CFG_FLOODNET_640x480'''
 DATASET_CFG_FLOODNET_640X480 = {
-    'type': 'CityScapesDataset',
-    'rootdir': os.path.join(os.getcwd(), 'CityScapes'),
+    'type': 'FloodNet',
+    'rootdir': os.path.join(os.getcwd(), 'floodnet'),
     'train': {
         'set': 'train',
         'data_pipelines': [
