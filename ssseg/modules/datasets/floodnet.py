@@ -28,8 +28,8 @@ class FloodNet(BaseDataset):
         # obtain the dirs
         rootdir = dataset_cfg['rootdir']
         # train/train-org-img
-        self.image_dir = os.path.join(rootdir, dataset_cfg['set'], "org-img")
-        self.ann_dir = os.path.join(rootdir, dataset_cfg['set'], "label-img")
+        self.image_dir = os.path.join(rootdir, dataset_cfg['set'], dataset_cfg['set'] + "org-img")
+        self.ann_dir = os.path.join(rootdir, dataset_cfg['set'], dataset_cfg['set'] + "label-img")
         # obatin imageids
         df = pd.read_csv(os.path.join(rootdir, dataset_cfg['set']+'.txt'), names=['imageids'])
         self.imageids = df['imageids'].values
