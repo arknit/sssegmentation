@@ -34,3 +34,5 @@ class FloodNet(BaseDataset):
         df = pd.read_csv(os.path.join(rootdir, dataset_cfg['set']+'.txt'), names=['imageids'])
         self.imageids = df['imageids'].values
         self.imageids = [str(_id) for _id in self.imageids]
+        self.ann_ext = '.jpg'
+        self.image_ext = '.jpg'
