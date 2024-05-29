@@ -19,8 +19,10 @@ class FloodNet(BaseDataset):
     classnames = ['__background__', 'building-flooded', 'building-non-flooded', 
                   'road-flooded', 'road-non-flooded',
                   'water', 'tree', 'vehicle', 'pool', 'grass']
-    palette = [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4), 
-               (5, 5, 5), (6, 6, 6), (7, 7, 7), (8, 8, 8), (9, 9,9)]
+    # palette = [(0, 0, 0), (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4), 
+    #            (5, 5, 5), (6, 6, 6), (7, 7, 7), (8, 8, 8), (9, 9,9)]
+    palette = [(127, 63, 63), (127, 106, 63), (106, 127, 63), (63, 127, 63), (63, 127, 106),
+     (63, 106, 127), (63, 63, 127), (106, 63, 127), (127, 63, 106), (127, 63, 63)]
     clsid2label = {0: 0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 8:8, 9:9}
     assert num_classes == len(classnames) and num_classes == len(palette)
     def __init__(self, mode, logger_handle, dataset_cfg):
